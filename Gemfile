@@ -1,1 +1,1 @@
-
+gem "minimal-mistakes-jekyll"
