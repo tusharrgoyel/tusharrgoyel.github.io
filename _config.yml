@@ -1,1 +1,12 @@
+gems:
+- jekyll-email-protect
+
+plugins:
+  -jekyll-sitemap
+  -jekyll-seo-tag
+  -jemoji
+  -jekyll-email-protect
+  -jekyll-remote-theme
+  -jekyll-include-cache
+  
 theme: minimal-mistakes-jekyll
