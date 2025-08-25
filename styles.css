@@ -296,3 +296,457 @@ body {
     .section-title { font-size: 2rem; }
     .nav-menu { display: none; }
 }
+
+/* About Me Section Specific Styles — UPDATED */
+.section-title {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 3rem;
+  color: #333;
+  position: relative;
+  scroll-margin-top: 110px; /* clears fixed navbar on anchor scroll */
+}
+
+.about-container {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 1rem;
+  align-items: start;
+  margin-top: 2rem;
+  padding-top: 0.5rem; /* gives breathing room under navbar */
+}
+
+.profile-section {
+  position: sticky;
+  top: 120px; /* matches your navbar height + spacing */
+}
+
+.profile-image {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(102, 126, 234, 0.3);
+  transition: all 0.3s ease;
+  position: relative;
+
+  /* simple graceful fallback if image fails */
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem; /* shows emoji if no <img> loads */
+  color: white;
+}
+
+.profile-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 25px 60px rgba(102, 126, 234, 0.4);
+}
+
+.profile-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* Removed buggy ::before / sibling selector logic */
+
+/* Right column */
+.about-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.intro-text h3 {
+  font-size: 2rem;
+  margin-bottom: 0.1rem;
+  color: #333;
+}
+
+.full-name {
+  color: #667eea;
+  font-weight: bold;
+}
+
+.preferred-name {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.location {
+  font-size: 1rem;
+  color: #888;
+  margin-bottom: 1rem;
+}
+
+.bio p {
+  margin-bottom: 1rem;
+  line-height: 1.7;
+  text-align: justify;
+}
+
+.contact-info-about {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background: rgba(102, 126, 234, 0.05);
+  border-radius: 10px;
+}
+
+.email a {
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.email a:hover {
+  text-decoration: underline;
+}
+
+/* Social Links — image logos */
+.social-links {
+  display: flex;
+  gap: 1rem;
+  margin: 2rem 0;
+  justify-content: center;
+}
+
+.social-links a {
+  padding: 10px;
+  border-radius: 50%;
+  background: rgba(102, 126, 234, 0.1);
+  transition: all 0.3s ease;
+  display: inline-flex;
+}
+
+.social-links a:hover {
+  background: rgba(102, 126, 234, 0.2);
+  transform: translateY(-3px);
+}
+
+.social-icon {
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+
+/* Interests Section */
+.interests-section {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #eee;
+}
+
+.interests-section h4 {
+  font-size: 1.5rem;
+  margin-bottom: 0.1rem;
+  color: #333;
+  text-align: left;
+}
+
+.interests-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  /* grid-template-columns: repeat(auto-fit, minmax(50px, 1fr)); */
+  gap: 0.5rem;
+  margin-top: 0;
+}
+
+.interest-item {
+    width: 40px;
+    height: 40px;
+  display: flex;
+  align-items: center;
+    justify-content: center;
+  /* flex-direction: column; */
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  padding: 0.5rem;
+  background: none;
+  /* background: linear-gradient(135deg, rgba(102, 126, 234, 0.05), rgba(118, 75, 162, 0.05)); */
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.interest-item:hover {
+    background: none;
+  /* background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1)); */
+  transform: translateY(-3px);
+}
+
+.interest-icon {
+  font-size: 2rem;
+  margin-bottom: 0;
+}
+
+.interest-item span {
+  display: none;
+  position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0,0,0,0.8);
+    color: #fff;
+    padding: 0.5rem 1rem;
+    font-size: 0.75rem;
+    white-space: nowrap;
+    border-radius: 5px;
+/* font-size: 0.9rem;
+  font-weight: 500;
+  color: #555; */
+}
+
+.interest-item:hover span {
+  display: block;
+}
+
+.interest-icon {
+  font-size: 1.3rem;
+  margin: 0;
+}
+
+
+/* Responsive Design for About Section */
+@media (max-width: 768px) {
+  .about-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    text-align: center;
+  }
+  .profile-section {
+    position: static;
+    display: flex;
+    justify-content: center;
+  }
+  .profile-image {
+    width: 200px;
+    height: 200px;
+  }
+  .interests-grid {
+    grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+  }
+  .social-links {
+    justify-content: center;
+  }
+}
+
+/* Collapse to a single column (we're not using the left profile image now) */
+.about-with-figure.about-container {
+  position: relative;                /* anchor for the floating figure */
+  display: grid;
+  grid-template-columns: 1fr;        /* was 300px 1fr */
+  gap: 1rem;
+  align-items: start;
+  margin-top: 2rem;
+}
+
+/* Hide old left column */
+.about-with-figure .profile-section { display: none; }
+
+/* Keep your card styling (adjust alpha to taste) */
+.about-with-figure .about-content {
+  position: relative;
+  z-index: 2;                        /* sit above background figure */
+  background: rgba(255, 255, 255, 0.86);
+  backdrop-filter: blur(2px);
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* Floating caricature — bottom-right, slightly outside the container */
+.about-with-figure::after {
+  content: "";
+  position: absolute;
+  right: -4vw;                       /* push it slightly out of the container */
+  bottom: -2vw;
+  width: clamp(220px, 32vw, 520px);  /* responsive sizing */
+  aspect-ratio: 1 / 1;               /* adjust if your art isn't square */
+  background: url("images/backimage.webp") center / contain no-repeat;
+  opacity: 0.6;                      /* ~60% visible */
+  pointer-events: none;              /* never blocks links/buttons */
+  z-index: 1;                        /* behind the text card */
+  filter: drop-shadow(0 12px 24px rgba(0,0,0,0.15));
+}
+
+/* Give the whole section a bit of extra right padding so text doesn't collide */
+.about-with-figure {
+  padding-right: clamp(120px, 22vw, 360px);
+}
+
+/* Tighten the space between the “Interests & Hobbies” title and icons (optional) */
+.interests-section h4 { margin-bottom: 0.5rem; }
+.interests-grid { margin-top: 0; gap: 0.5rem; }
+
+/* Mobile tweaks: make the caricature smaller and more subtle, or hide if needed */
+@media (max-width: 768px) {
+  .about-with-figure {
+    padding-right: 1rem;            /* remove extra padding on small screens */
+  }
+  .about-with-figure::after {
+    right: -10px;
+    bottom: -10px;
+    width: clamp(160px, 45vw, 280px);
+    height: auto;
+    aspect-ratio: 1 / 2; /* maintain aspect ratio */
+    opacity: 0.45;                   /* soften on mobile */
+  }
+}
+
+/* If you ever want to hide the figure on very small devices, uncomment:
+@media (max-width: 480px) {
+  .about-with-figure::after { display: none; }
+}
+*/
+
+
+
+
+
+
+
+/* NOW WE ARE IN FOR EXPERIENCE SECTION STYLES */
+/* ==== Experience Timeline (Basic) ==== */
+:root{
+  --tl-line: rgba(102,126,234,0.35); /* matches your palette */
+  --tl-node: #667eea;
+  --tl-card-bg: #fff;
+  --tl-card-border: rgba(102,126,234,0.12);
+}
+
+.timeline{
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.timeline::before{
+  content:"";
+  position: absolute;
+  left: 28px;               /* vertical line x-position */
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg, var(--tl-line), rgba(118,75,162,0.35));
+}
+
+.tl-item{
+  position: relative;
+  display: grid;
+  grid-template-columns: 56px 1fr; /* left gutter for nodes */
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.tl-node{
+  position: relative;
+  margin-top: 0.25rem; /* aligns with header */
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--tl-node);
+  box-shadow: 0 0 0 4px rgba(102,126,234,0.15);
+  transform: translateX(20px); /* centers node on the line */
+}
+
+.tl-content{
+  background: var(--tl-card-bg);
+  border: 1px solid var(--tl-card-border);
+  border-radius: 16px;
+  padding: 1.25rem 1.25rem 1rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.tl-content:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.08);
+  border-color: rgba(102,126,234,0.22);
+}
+
+.tl-header{
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.tl-role{
+  margin: 0;
+  font-size: 1.25rem;
+  color: #333;
+}
+
+.tl-meta{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem 1rem;
+  font-size: 0.95rem;
+  color: #666;
+}
+
+.tl-org{ font-weight: 600; color: #667eea; }
+.tl-loc{ opacity: 0.8; }
+.tl-date{ opacity: 0.9; }
+
+.tl-details{
+  margin-top: 0.5rem;
+}
+
+.tl-details summary{
+  cursor: pointer;
+  list-style: none; /* remove default triangle marker */
+  font-weight: 600;
+  color: #333;
+  padding: 0.35rem 0.6rem;
+  border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+/* custom caret */
+.tl-details summary::before{
+  content: "▸";
+  font-size: 0.9rem;
+  transform: translateY(1px);
+  transition: transform 0.2s ease;
+  color: #667eea;
+}
+
+/* open state caret */
+.tl-details[open] summary::before{
+  transform: rotate(90deg) translateY(0);
+}
+
+/* hover/focus styles for summary */
+.tl-details summary:hover,
+.tl-details summary:focus{
+  background: rgba(102,126,234,0.08);
+}
+
+.tl-bullets{
+  margin: 0.5rem 0 0 1rem;
+  padding-left: 1rem;
+}
+
+.tl-bullets li{
+  margin: 0.25rem 0;
+  line-height: 1.5;
+}
+
+/* responsive */
+@media (max-width: 768px){
+  .timeline::before{ left: 20px; }
+  .tl-item{ grid-template-columns: 44px 1fr; }
+  .tl-node{ transform: translateX(12px); }
+}

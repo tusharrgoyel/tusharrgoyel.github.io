@@ -1,25 +1,109 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Experience - Your Name</title>
-    <!-- Copy the same CSS from about.html -->
-</head>
-<body>
-    <!-- Copy the same navbar from about.html, but make "Experience" active -->
-    
-    <div class="page-header">
-        <h1>Experience</h1>
-    </div>
+<section class="section" id="experience">
+  <h2 class="section-title">Experience</h2>
 
-    <div class="container">
-        <h2>Work Experience</h2>
-        <h3>Job Title - Company Name (Year - Year)</h3>
-        <p>Description of your role and achievements.</p>
-        
-        <h3>Previous Job Title - Company Name (Year - Year)</h3>
-        <p>Description of your role and achievements.</p>
-    </div>
+  <div class="timeline" role="list">
+    <!-- ITEM 1-->
+    <article class="tl-item" role="listitem">
+      <div class="tl-node" aria-hidden="true"></div>
+      <div class="tl-content">
+        <header class="tl-header">
+          <h3 class="tl-role">Graduate Researcher</h3>
+          <div class="tl-meta">
+            <span class="tl-org">Combustion Physics Laboratory, Wayne State University</span>
+            <span class="tl-loc">Detroit, MI, USA</span>
+            <span class="tl-date">Sep 2020 – Present</span>
+          </div>
+        </header>
+
+        <!-- built-in interactive toggle -->
+        <details class="tl-details">
+          <summary>Highlights</summary>
+          <ul class="tl-bullets">
+            <li>Developed high-fidelity CFD models (Fluent/CONVERGE) with V&V workflow.</li>
+            <li>Designed autoignition and flame-speed test matrix; reduced cycle time 30%.</li>
+            <li>Built Python post-processing toolkit; automated reports and plots.</li>
+          </ul>
+        </details>
+      </div>
+    </article>
+
+    <!-- ITEM 2-->
+    <article class="tl-item" role="listitem">
+      <div class="tl-node" aria-hidden="true"></div>
+      <div class="tl-content">
+        <header class="tl-header">
+          <h3 class="tl-role">Senior Automation Engineer</h3>
+          <div class="tl-meta">
+            <span class="tl-org">Insulet Corporation</span>
+            <span class="tl-loc">Billerica, MA, USA</span>
+            <span class="tl-date">Jul 2019 – May 2020</span>
+          </div>
+        </header>
+        <details class="tl-details">
+          <summary>Highlights</summary>
+          <ul class="tl-bullets">
+            <li>RCM/optical diagnostics; ignition delay and laminar flame speed studies.</li>
+            <li>Chemkin-Pro/Cantera kinetics evaluation; sensitivity & transport models.</li>
+            <li>Co-authored publications; mentored undergrads in lab safety & methods.</li>
+          </ul>
+        </details>
+      </div>
+    </article>
+
+    <!-- ITEM 3-->
+     <article class="tl-item" role="listitem">
+      <div class="tl-node" aria-hidden="true"></div>
+      <div class="tl-content">
+        <header class="tl-header">
+          <h3 class="tl-role">Graduate Researcher</h3>
+          <div class="tl-meta">
+            <span class="tl-org">Combustion Physics Laboratory, Wayne State University</span>
+            <span class="tl-loc">Detroit, MI</span>
+            <span class="tl-date">Jan 2017 – Jul 2019</span>
+          </div>
+        </header>
+
+        <!-- built-in interactive toggle -->
+        <details class="tl-details">
+          <summary>Highlights</summary>
+          <ul class="tl-bullets">
+            <li>Developed high-fidelity CFD models (Fluent/CONVERGE) with V&V workflow.</li>
+            <li>Designed autoignition and flame-speed test matrix; reduced cycle time 30%.</li>
+            <li>Built Python post-processing toolkit; automated reports and plots.</li>
+          </ul>
+        </details>
+      </div>
+    </article>
+
+    <!-- ITEM 4-->
+     <article class="tl-item" role="listitem">
+      <div class="tl-node" aria-hidden="true"></div>
+      <div class="tl-content">
+        <header class="tl-header">
+          <h3 class="tl-role">Graduate Researcher</h3>
+          <div class="tl-meta">
+            <span class="tl-org">Combustion Physics Laboratory, Wayne State University</span>
+            <span class="tl-loc">Detroit, MI</span>
+            <span class="tl-date">Sep 2020 – Present</span>
+          </div>
+        </header>
+
+        <!-- built-in interactive toggle -->
+        <details class="tl-details">
+          <summary>Highlights</summary>
+          <ul class="tl-bullets">
+            <li>Developed high-fidelity CFD models (Fluent/CONVERGE) with V&V workflow.</li>
+            <li>Designed autoignition and flame-speed test matrix; reduced cycle time 30%.</li>
+            <li>Built Python post-processing toolkit; automated reports and plots.</li>
+          </ul>
+        </details>
+      </div>
+    </article>
+
+
+
+    <!-- Add more <article class="tl-item"> … </article> as needed -->
+  </div>
+</section>
 </body>
 </html>
